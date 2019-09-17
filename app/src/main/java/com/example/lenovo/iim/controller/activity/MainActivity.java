@@ -54,12 +54,16 @@ public class MainActivity extends FragmentActivity {
 
             }
         });
+        //默认选择会话页面
+        rg_main.check(R.id.rb_main_chat);
     }
 
     private void switchFragment(Fragment fragment) {
-//        FragmentManager fm = getSupportFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fl_main,fragment).commit();
+
 //        FragmentTransaction ft = fm.beginTransaction();
-//        ft.replace(R.id.rb_main,fragment);
+//        ft.replace(R.id.rl,fragment);
 //        ft.show(fragment);
 //        ft.commit();
 
